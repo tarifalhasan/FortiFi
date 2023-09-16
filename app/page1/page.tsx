@@ -25,44 +25,47 @@ const Page1 = () => {
   const myPosition = [
     {
       valutName: "sAVAX Vault",
-      apr: "xx%",
+
       amount: "$231100.14",
     },
     {
       valutName: "BTC.b Vault",
-      apr: "xx%",
+
       amount: "$545100.14",
     },
     {
       valutName: "USDC Vault",
-      apr: "xx%",
+
       amount: "$821400.14",
     },
     {
       valutName: "L1 BAL Vault",
-      apr: "xx%",
+
       amount: "$558100.14",
     },
     {
       valutName: "L1 BAL Vault",
-      apr: "xx%",
+
       amount: "$558100.14",
     },
     {
       valutName: "L1 BAL Vault",
-      apr: "xx%",
+
       amount: "$558100.14",
     },
     {
       valutName: "L1 BAL Vault",
-      apr: "xx%",
+
       amount: "$558100.14",
     },
   ];
   return (
     <div className=" space-y-6">
       {/* Profile */}
-      <div className=" flex gap-5 sm:flex-row flex-col items-center  justify-between card">
+      <div
+        className=" flex gap-5 sm:flex-row flex-col items-center  justify-between  p-4 rounded-lg"
+        style={{ background: "rgba(26, 73, 91, 0.25)" }}
+      >
         <div className="flex items-center gap-4">
           <Avatar className=" w-[75px] h-[75px]">
             <AvatarImage src="https://github.com/shadcn.png" />
@@ -93,7 +96,7 @@ const Page1 = () => {
             <div className="card">
               <div className=" flex items-center gap-3">
                 <Image src={barSmallCrat} alt="bar" />
-                <h2 className=" text-t-25 font-extrabold text-white">
+                <h2 className=" text-t-25 font-extrabold text-darken">
                   Fort Stats
                 </h2>
               </div>
@@ -102,7 +105,7 @@ const Page1 = () => {
                   <li
                     key={index}
                     className={` ${
-                      index % 2 === 0 && "bg-dark"
+                      index % 2 === 0 && "bg-primary text-white"
                     } flex items-center justify-between py-3 px-2 rounded-md`}
                   >
                     <span className="block text-t-16 font-semibold">
@@ -121,7 +124,7 @@ const Page1 = () => {
             <div className="card">
               <div className=" flex items-center gap-3">
                 <Image src={platform} alt="bar" />
-                <h2 className=" text-t-25 font-extrabold text-white">
+                <h2 className=" text-t-25 font-extrabold text-darken">
                   Platform Info
                 </h2>
               </div>
@@ -130,7 +133,7 @@ const Page1 = () => {
                   <li
                     key={index}
                     className={` ${
-                      index % 2 === 0 && "bg-dark"
+                      index % 2 === 0 && "bg-primary text-white "
                     } flex items-center justify-between py-3 px-2 rounded-md`}
                   >
                     <span className="block text-t-16 font-semibold">
@@ -148,35 +151,25 @@ const Page1 = () => {
         <div className="col-span-11 overflow-hidden card max-h-[739px] h-full overflow-y-scroll scrollbar scrollbar-thumb-secondary scrollbar-track-gray-100 xl:col-span-6">
           {/* my position */}
           <div className=" relative ">
-            <div className=" h-11  bg-primary pb-3 sticky left-0 top-0 right-0  flex items-center gap-3">
+            <div className=" h-11    py-5   flex items-center gap-3">
               <Image src={satistics} alt="bar" />
-              <h2 className=" text-t-25 font-extrabold text-white">
+              <h2 className=" text-t-25 font-extrabold text-darken">
                 My Positions
               </h2>
             </div>
-            <ul className=" space-y-4 py-5">
+            <ul className="  space-y-4 py-5">
               {myPosition.map((data, index) => (
                 <li
                   key={index}
-                  className=" flex justify-between items-center rounded-md py-3 px-3 bg-dark"
+                  className=" flex text-white h-16 justify-between items-center rounded-md py-3 px-3 bg-dark"
                 >
                   <span className="text-t-18 font-semibold block flex-1">
                     {data.valutName}
                   </span>
-                  <span className="flex items-center space-x-14">
-                    <span className="flex flex-col space-y-1">
-                      <span className="text-t-18 font-semibold">
-                        Add Vault APR
-                      </span>
-                      <span className="text-t-18 font-extrabold">
-                        {data.apr}
-                      </span>
-                    </span>
-                    <span className="flex flex-col space-y-1">
-                      <span className="text-t-18 font-semibold">Amount </span>
-                      <span className="text-t-18 font-extrabold">
-                        {data.amount}
-                      </span>
+                  <span className="text-t-18 font-semibold inline-flex items-center gap-3">
+                    Amount{" "}
+                    <span className=" text-t-20 font-extrabold">
+                      {data.amount}
                     </span>
                   </span>
                 </li>

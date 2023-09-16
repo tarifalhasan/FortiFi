@@ -48,9 +48,11 @@ module.exports = {
           foreground: "hsl(var(--popover-foreground))",
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
+          DEFAULT: "var(--card)",
           foreground: "hsl(var(--card-foreground))",
         },
+        darken: "#101C2D",
+        db: "rgba(0, 0, 0, 0.10)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -76,6 +78,7 @@ module.exports = {
         "t-17": "1.0625em",
         "t-18": "1.125em",
         "t-22": "1.375em",
+        "t-20": "1.25em",
         "t-25": "1.5625em",
       },
     },

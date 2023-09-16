@@ -18,7 +18,7 @@ const Footer = () => {
         <ul className=" flex items-center gap-2">
           <li>
             <Link
-              className=" transition-all duration-300 hover:bg-secondary w-12 h-12 rounded-full bg-dark grid place-items-center"
+              className=" transition-all duration-300 hover:bg-secondary w-12 h-12 rounded-full bg-black grid place-items-center"
               href=""
               target="_blank"
             >
@@ -27,7 +27,7 @@ const Footer = () => {
           </li>
           <li>
             <Link
-              className=" transition-all duration-300 hover:bg-secondary w-12 h-12 rounded-full bg-dark grid place-items-center"
+              className=" transition-all duration-300 hover:bg-secondary w-12 h-12 rounded-full bg-black grid place-items-center"
               href=""
               target="_blank"
             >
@@ -36,7 +36,7 @@ const Footer = () => {
           </li>
           <li>
             <Link
-              className=" transition-all duration-300 hover:bg-secondary w-12 h-12 rounded-full bg-dark grid place-items-center"
+              className=" transition-all duration-300 hover:bg-secondary w-12 h-12 rounded-full bg-black grid place-items-center"
               href=""
               target="_blank"
             >
@@ -45,7 +45,7 @@ const Footer = () => {
           </li>
           <li>
             <Link
-              className=" transition-all duration-300 hover:bg-secondary w-12 h-12 rounded-full bg-dark grid place-items-center"
+              className=" transition-all duration-300 hover:bg-secondary w-12 h-12 rounded-full bg-black grid place-items-center"
               href=""
               target="_blank"
             >
