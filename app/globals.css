@@ -53,6 +53,9 @@
   option {
     font-family: "Comfortaa", cursive !important;
   }
+  .card {
+    @apply bg-primary rounded-md p-5;
+  }
 }
 
 body {

@@ -72,10 +72,12 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontSize: {
+        "t-16": "1em",
         "t-17": "1.0625em",
+        "t-18": "1.125em",
         "t-25": "1.5625em",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tailwind-scrollbar")],
 };
