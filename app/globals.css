@@ -50,7 +50,8 @@
   }
   button,
   select,
-  option {
+  option,
+  .font-comforta {
     font-family: "Comfortaa", cursive !important;
   }
   .card {

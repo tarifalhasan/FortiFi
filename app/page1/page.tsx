@@ -62,7 +62,7 @@ const Page1 = () => {
   return (
     <div className=" space-y-6">
       {/* Profile */}
-      <div className=" flex items-center justify-between card">
+      <div className=" flex gap-5 sm:flex-row flex-col items-center  justify-between card">
         <div className="flex items-center gap-4">
           <Avatar className=" w-[75px] h-[75px]">
             <AvatarImage src="https://github.com/shadcn.png" />
@@ -70,7 +70,7 @@ const Page1 = () => {
           </Avatar>
           <div className=" space-y-2">
             <h4 className=" text-t-18 font-bold text-white">Daisy Phelps</h4>
-            <p className="text-t-25 text-secondary font-extrabold">
+            <p className=" text-t-18 sm:text-t-25 text-secondary font-extrabold">
               0x3e5678....b567th56777
             </p>
           </div>
@@ -80,12 +80,14 @@ const Page1 = () => {
             <PiCurrencyCircleDollar className="text-white text-3xl" />
             <h6 className=" text-t-18 font-bold text-white">My TVL</h6>
           </div>
-          <p className="text-t-25 text-secondary font-extrabold">$2521.55</p>
+          <p className=" text-t-18 sm:text-t-25 text-secondary font-extrabold">
+            $2521.55
+          </p>
         </div>
       </div>
       {/* details */}
       <div className=" grid   gap-6 grid-cols-11">
-        <div className="col-span-11 lg:col-span-5 grid gap-6">
+        <div className="col-span-11 xl:col-span-5  sm:grid-cols-2 xl:grid-cols-1 grid gap-6">
           {/* Sales */}
           <div>
             <div className="card">
@@ -143,7 +145,7 @@ const Page1 = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-11 overflow-hidden card max-h-[739px] h-full overflow-y-scroll scrollbar scrollbar-thumb-secondary scrollbar-track-gray-100 lg:col-span-6">
+        <div className="col-span-11 overflow-hidden card max-h-[739px] h-full overflow-y-scroll scrollbar scrollbar-thumb-secondary scrollbar-track-gray-100 xl:col-span-6">
           {/* my position */}
           <div className=" relative ">
             <div className=" h-11  bg-primary pb-3 sticky left-0 top-0 right-0  flex items-center gap-3">
