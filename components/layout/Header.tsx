@@ -27,7 +27,7 @@ const Header = () => {
         <Image className=" w-[55%] md:w-full" alt="logo" src={logo} />
       </Link>
 
-      <div className=" hidden  md:grid grid-cols-2 gap-3 w-auto md:w-[calc(181px*2)]">
+      <div className="  grid grid-cols-2 gap-3 w-auto md:w-[calc(181px*2)]">
         <Select>
           <SelectTrigger className="">
             <SelectValue placeholder="Chain" />
@@ -46,7 +46,6 @@ const Header = () => {
           </SelectContent>
         </Select>
       </div>
-      <div className=" md:hidden w-full h-20 bg-white"></div>
     </header>
   );
 };
