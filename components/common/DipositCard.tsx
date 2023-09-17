@@ -172,7 +172,7 @@ const DipositCard: React.FC<Props> = ({ data }) => {
               style={{ padding: "15px 24px" }}
               className="border-2 bg-secondary border-darken rounded-lg text-t-18 font-bold text-darken  w-full inline-flex  items-center justify-center  "
             >
-              Withdrew
+              Withdraw
             </button>
           )}
         </div>
