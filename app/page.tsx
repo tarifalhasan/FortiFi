@@ -18,7 +18,7 @@ export default function Home() {
           A next-gen yield <br /> aggregation protocol
         </h2>
         <Button
-          onClick={() => router.push("/")}
+          onClick={() => router.push("/page3")}
           variant={"secondary"}
           className=" rounded-full px-9"
         >
