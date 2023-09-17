@@ -47,8 +47,7 @@ const Header = () => {
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="/page2">Profile</SelectItem>
-            <SelectItem value="dark">Dark</SelectItem>
-            <SelectItem value="system">System</SelectItem>
+            <SelectItem value="/">main</SelectItem>
           </SelectContent>
         </Select>
       </div>
