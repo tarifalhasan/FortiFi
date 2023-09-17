@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <section className="  min-h-[80vh] h-full bg-primary px-5 grid place-items-center  rounded-3xl">
+    <section className="  min-h-[80vh] h-full bg-[#122739] px-5 grid place-items-center  rounded-3xl">
       <div className=" space-y-5 grid place-items-center">
         <Image
           className=" block mx-auto  max-w-[55%]"

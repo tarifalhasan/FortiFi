@@ -67,7 +67,7 @@ const Page1 = () => {
       {/* Profile */}
       <div
         className=" flex gap-5 sm:flex-row flex-col items-center  justify-between  p-4 rounded-lg"
-        style={{ background: "rgba(26, 73, 91, 0.25)" }}
+        style={{ background: "#122739" }}
       >
         <div className="flex items-center gap-4">
           <Avatar className=" w-[75px] h-[75px]">

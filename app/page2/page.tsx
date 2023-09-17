@@ -11,6 +11,7 @@ const Page2 = () => {
       apy: "5.2%",
       myTvl: "0.0001 BTC.b",
       assetsPrice: "$31,069.01",
+      slug: "/page4",
     },
     {
       icon: savax,
@@ -20,6 +21,7 @@ const Page2 = () => {
       apy: "5.2%",
       myTvl: "0.0001 BTC.b",
       assetsPrice: "$31,069.01",
+      slug: "/page5",
     },
     {
       icon: usdc,
@@ -29,6 +31,7 @@ const Page2 = () => {
       apy: "5.2%",
       myTvl: "0.0001 BTC.b",
       assetsPrice: "$31,069.01",
+      slug: "page6",
     },
   ];
 
@@ -46,6 +49,7 @@ const Page2 = () => {
             myTvl={data.myTvl}
             apy={data.apy}
             assetsPrice={data.assetsPrice}
+            slug={data.slug}
           />
         ))}
       </div>

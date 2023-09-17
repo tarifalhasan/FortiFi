@@ -7,30 +7,33 @@ const Page2 = () => {
   const staticData: DispositCardType[] = [
     {
       icon: bitcoin,
-      name: "FortiFi BTC.b Vault",
+      name: "BTC.b Vault",
       id: "#3455",
       vaultTvl: "$80K",
       apy: "5.2%",
       myTvl: "0.0001 BTC.b",
       assetsPrice: "$31,069.01",
+      slug: "/page4",
     },
     {
       icon: savax,
-      name: "FortiFi sAVAX Vault",
+      name: "sAVAX Vault",
       id: "#3455",
       vaultTvl: "$80K",
       apy: "5.2%",
       myTvl: "0.0001 BTC.b",
       assetsPrice: "$31,069.01",
+      slug: "/page5",
     },
     {
       icon: usdc,
-      name: "FortiFi USDC Vault",
+      name: "USDC Vault",
       id: "#3455",
       vaultTvl: "$80K",
       apy: "5.2%",
       myTvl: "0.0001 BTC.b",
       assetsPrice: "$31,069.01",
+      slug: "page6",
     },
   ];
   return (

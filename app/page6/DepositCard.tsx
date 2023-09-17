@@ -1,11 +1,11 @@
-import { bitcoin } from "@/assets/icons";
+import { usdc } from "@/assets/images";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import Image from "next/image";
 
 const DepositCard = () => {
   return (
-    <div className=" space-y-6">
+    <div>
       <div>
         <div className="flex justify-center">
           <div className=" relative z-10 px-5 pt-9 grid grid-cols-2 gap-2">
@@ -80,7 +80,7 @@ const DepositCard = () => {
         <div className="flex items-center justify-between">
           <div>
             <h5 className=" text-t-17 lg:text-t-20 font-bold text-secondary">
-              Need BTC.b?
+              Need USDC?
             </h5>
             <p className=" text-t-16  sm:text-t-18 font-normal text-white">
               Get the best price with one click!
@@ -88,7 +88,7 @@ const DepositCard = () => {
           </div>
           <div>
             <Image
-              src={bitcoin}
+              src={usdc}
               alt=""
               className=" w-[65px] h-[65px] rounded-full"
             />

@@ -1,3 +1,4 @@
+"use client";
 import { logo } from "@/assets/images";
 import {
   Select,
@@ -8,9 +9,19 @@ import {
 } from "@/components/ui/select";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 
 const Header = () => {
+  const [selectedValue, setSelectedValue] = useState("");
+  const router = useRouter();
+
+  const hangleChange = (value: any) => {
+    router.push(value);
+    router.refresh();
+  };
+
   return (
     <header className=" py-6 container  flex items-center justify-between">
       <Link href={"/"}>
@@ -30,12 +41,12 @@ const Header = () => {
             <SelectItem value="system">System</SelectItem>
           </SelectContent>
         </Select>
-        <Select>
+        <Select onValueChange={(v) => hangleChange(v)}>
           <SelectTrigger className="">
             <SelectValue placeholder="Address" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="light">Light</SelectItem>
+            <SelectItem value="/page2">Profile</SelectItem>
             <SelectItem value="dark">Dark</SelectItem>
             <SelectItem value="system">System</SelectItem>
           </SelectContent>

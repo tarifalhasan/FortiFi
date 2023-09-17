@@ -8,4 +8,5 @@ export interface DispositCardType {
   apy: string;
   myTvl: string;
   assetsPrice: string;
+  slug: string;
 }

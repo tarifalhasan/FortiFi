@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/select";
 import { DispositCardType } from "@/interfaces";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import { Button } from "../ui/button";
 import { Slider } from "../ui/slider";
@@ -30,7 +31,9 @@ const DipositCard: React.FC<Props> = ({ data }) => {
         <div className=" flex items-center  gap-4 px-3">
           <Image src={data.icon} alt="bitcoin" />
           <div className=" space-y-1">
-            <h4 className=" text-t-22 font-extrabold">{data.name}</h4>
+            <Link href={data.slug} className=" text-t-22 font-extrabold">
+              {data.name}
+            </Link>
             <p className="text-t-18 font-medium">Vault ID {data.id}</p>
           </div>
         </div>
