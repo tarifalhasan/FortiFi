@@ -1,14 +1,32 @@
-import { bitcoin } from "@/assets/icons";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import React from "react";
 
-const Card = () => {
+export interface CardProps {
+  icon: StaticImageData | string;
+  name: string;
+  id: string;
+  vaultTvl: string;
+  apy: string;
+  myTvl: string;
+  assetsPrice: string;
+}
+
+const Card: React.FC<CardProps> = ({
+  icon,
+  name,
+  id,
+  vaultTvl,
+  myTvl,
+  assetsPrice,
+  apy,
+}) => {
   return (
     <div className="card rounded-lg">
-      <div className=" flex items-center justify-between px-3">
-        <Image src={bitcoin} alt="bitcoin" />
+      <div className=" flex items-center gap-5 px-3">
+        <Image src={icon} alt="bitcoin" />
         <div className=" space-y-1">
-          <h4 className=" text-t-22 font-extrabold">BTC.b Vault</h4>
-          <p className="text-t-18 font-medium">Vault ID #3456</p>
+          <h4 className=" text-t-22 font-extrabold">{name}</h4>
+          <p className="text-t-18 font-medium">Vault ID {id}</p>
         </div>
       </div>
       <div className=" pt-8 grid grid-cols-2 gap-5">
@@ -17,28 +35,33 @@ const Card = () => {
             Vault TVL
           </h4>
           <div className=" w-6 h-[2px] bg-white" />
-          <h3 className=" text-t-18 font-extrabold  text-white "> $80K</h3>
+          <h3 className=" text-t-18 font-extrabold  text-white ">
+            {" "}
+            {vaultTvl}
+          </h3>
         </div>
         <div className="rounded-md space-y-2 p-4 bg-primary grid place-items-center">
           <h4 className=" text-t-16 text-secondary font-bold text-center ">
             APY
           </h4>
           <div className=" w-6 h-[2px] bg-white" />
-          <h3 className=" text-t-18 font-extrabold text-white">5.2%</h3>
+          <h3 className=" text-t-18 font-extrabold text-white">{apy}</h3>
         </div>
         <div className="rounded-md space-y-2 p-4 bg-primary grid place-items-center">
           <h4 className=" text-t-16 text-secondary font-bold text-center ">
             My TVL
           </h4>
           <div className=" w-6 h-[2px] bg-white" />
-          <h3 className=" text-t-18 font-extrabold text-white">0.0001 BTC.b</h3>
+          <h3 className=" text-t-18 font-extrabold text-white">{myTvl}</h3>
         </div>
         <div className="rounded-md space-y-2 p-4 bg-primary grid place-items-center">
           <h4 className=" text-t-16 text-secondary font-bold text-center ">
             Asset Price
           </h4>
           <div className=" w-6 h-[2px] bg-white" />
-          <h3 className=" text-t-18 font-extrabold text-white">$31,069.01</h3>
+          <h3 className=" text-t-18 font-extrabold text-white">
+            {assetsPrice}
+          </h3>
         </div>
       </div>
     </div>

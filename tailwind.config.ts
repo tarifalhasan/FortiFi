@@ -53,6 +53,7 @@ module.exports = {
         },
         darken: "#101C2D",
         db: "rgba(0, 0, 0, 0.10)",
+        bb: "rgba(0, 0, 0, 0.55)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -74,6 +75,7 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontSize: {
+        "t-14": "0.875em",
         "t-16": "1em",
         "t-17": "1.0625em",
         "t-18": "1.125em",

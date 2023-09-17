@@ -1,6 +1,38 @@
+import { bitcoin } from "@/assets/icons";
+import { savax, usdc } from "@/assets/images";
 import DipositCard from "@/components/common/DipositCard";
+import { DispositCardType } from "@/interfaces";
 import { BiSearchAlt2 } from "react-icons/bi";
 const Page2 = () => {
+  const staticData: DispositCardType[] = [
+    {
+      icon: bitcoin,
+      name: "FortiFi BTC.b Vault",
+      id: "#3455",
+      vaultTvl: "$80K",
+      apy: "5.2%",
+      myTvl: "0.0001 BTC.b",
+      assetsPrice: "$31,069.01",
+    },
+    {
+      icon: savax,
+      name: "FortiFi sAVAX Vault",
+      id: "#3455",
+      vaultTvl: "$80K",
+      apy: "5.2%",
+      myTvl: "0.0001 BTC.b",
+      assetsPrice: "$31,069.01",
+    },
+    {
+      icon: usdc,
+      name: "FortiFi USDC Vault",
+      id: "#3455",
+      vaultTvl: "$80K",
+      apy: "5.2%",
+      myTvl: "0.0001 BTC.b",
+      assetsPrice: "$31,069.01",
+    },
+  ];
   return (
     <div className=" h-full space-y-7 pt-5">
       <div className="flex w-full justify-end">
@@ -14,15 +46,9 @@ const Page2 = () => {
         </div>
       </div>
       <div className=" grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-        <div>
-          <DipositCard />
-        </div>
-        <div>
-          <DipositCard />
-        </div>
-        <div>
-          <DipositCard />
-        </div>
+        {staticData.map((data) => (
+          <DipositCard key={data.name} data={data} />
+        ))}
       </div>
     </div>
   );

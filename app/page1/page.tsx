@@ -21,42 +21,45 @@ const Page1 = () => {
       price: "$500.00 FORT",
     },
   ];
+  const platformData = [
+    {
+      name: "Total Value Licked ( TVL )",
+      price: " $2,902,407.00 USD",
+    },
+    {
+      name: "AVAX TVL",
+      price: "4400 AVAX",
+    },
+    {
+      name: "BTC.b TVL",
+      price: "2.001 BTC.b",
+    },
+    {
+      name: "Stables TVL",
+      price: "1,902,407.00 USD",
+    },
+  ];
 
   const myPosition = [
     {
       valutName: "sAVAX Vault",
 
-      amount: "$231100.14",
+      amount: "$1100.14",
     },
     {
       valutName: "BTC.b Vault",
 
-      amount: "$545100.14",
+      amount: "$400.21",
     },
     {
       valutName: "USDC Vault",
 
-      amount: "$821400.14",
+      amount: "$0.12",
     },
     {
       valutName: "L1 BAL Vault",
 
-      amount: "$558100.14",
-    },
-    {
-      valutName: "L1 BAL Vault",
-
-      amount: "$558100.14",
-    },
-    {
-      valutName: "L1 BAL Vault",
-
-      amount: "$558100.14",
-    },
-    {
-      valutName: "L1 BAL Vault",
-
-      amount: "$558100.14",
+      amount: "$100.14",
     },
   ];
   return (
@@ -108,10 +111,10 @@ const Page1 = () => {
                       index % 2 === 0 && "bg-primary text-white"
                     } flex items-center justify-between py-3 px-2 rounded-md`}
                   >
-                    <span className="block text-t-16 font-semibold">
+                    <span className="block text-t-14 sm:text-t-16 font-semibold">
                       {data.name}
                     </span>
-                    <span className="block text-t-16  font-extrabold">
+                    <span className="block text-t-14 sm:text-t-16  font-extrabold">
                       {data.price}
                     </span>
                   </li>
@@ -129,17 +132,17 @@ const Page1 = () => {
                 </h2>
               </div>
               <ul className=" py-5 space-y-4">
-                {fortStar.map((data, index) => (
+                {platformData.map((data, index) => (
                   <li
                     key={index}
                     className={` ${
                       index % 2 === 0 && "bg-primary text-white "
                     } flex items-center justify-between py-3 px-2 rounded-md`}
                   >
-                    <span className="block text-t-16 font-semibold">
+                    <span className="block text-t-14 sm:text-t-16 font-semibold">
                       {data.name}
                     </span>
-                    <span className="block text-t-16  font-extrabold">
+                    <span className="block text-t-14 sm:text-t-16  font-extrabold">
                       {data.price}
                     </span>
                   </li>
@@ -163,12 +166,12 @@ const Page1 = () => {
                   key={index}
                   className=" flex text-white h-16 justify-between items-center rounded-md py-3 px-3 bg-dark"
                 >
-                  <span className="text-t-18 font-semibold block flex-1">
+                  <span className=" text-t-14 sm:text-t-18 font-semibold block flex-1">
                     {data.valutName}
                   </span>
-                  <span className="text-t-18 font-semibold inline-flex items-center gap-3">
+                  <span className="text-t-14 sm:text-t-18 font-semibold inline-flex items-center gap-3">
                     Amount{" "}
-                    <span className=" text-t-20 font-extrabold">
+                    <span className=" text-t-18 sm:text-t-20 font-extrabold">
                       {data.amount}
                     </span>
                   </span>

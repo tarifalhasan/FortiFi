@@ -1,8 +1,8 @@
 "use client";
-
 import * as SelectPrimitive from "@radix-ui/react-select";
 import { Check } from "lucide-react";
 import * as React from "react";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 import { cn } from "@/lib/utils";
 
@@ -14,33 +14,21 @@ const SelectValue = SelectPrimitive.Value;
 
 const SelectTrigger = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
->(({ className, children, ...props }, ref) => (
+  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger> & {
+    iconColor?: string;
+  }
+>(({ className, children, iconColor = "#DEB543", ...props }, ref) => (
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      "flex h-[50px] w-full items-center  justify-center rounded-full border border-[#F2EFD1] bg-[#101C2D] px-3 py-2 text-sm  placeholder:text-white text-white focus:outline-none  disabled:cursor-not-allowed disabled:opacity-50",
+      "flex h-[50px] w-full items-center font-comforta  justify-center font-bold rounded-full border border-[#F2EFD1] bg-[#101C2D] px-3 py-2 text-sm  placeholder:text-white text-white focus:outline-none  disabled:cursor-not-allowed disabled:opacity-50",
       className
     )}
     {...props}
   >
     {children}
     <SelectPrimitive.Icon asChild>
-      <svg
-        className=" ml-2"
-        xmlns="http://www.w3.org/2000/svg"
-        width={15}
-        height={10}
-        viewBox="0 0 15 10"
-        fill="none"
-      >
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M14.5791 0.91897C14.0241 0.360343 13.1278 0.360343 12.5728 0.91897L7.46443 6.01935L2.42724 0.91897C1.87224 0.360343 0.975899 0.360343 0.420902 0.91897C0.151522 1.1895 0 1.55776 0 1.94193C0 2.3261 0.151522 2.69435 0.420902 2.96489L6.45414 9.07382C6.72132 9.34658 7.08502 9.5 7.46443 9.5C7.84383 9.5 8.20753 9.34658 8.47471 9.07382L14.5791 2.96489C14.8485 2.69435 15 2.3261 15 1.94193C15 1.55776 14.8485 1.1895 14.5791 0.91897Z"
-          fill="#DEB543"
-        />
-      </svg>
+      <MdKeyboardArrowDown size={24} color={`${iconColor}`} />
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ));
