@@ -1,3 +1,5 @@
+"use client";
+
 import { f_logo_dark } from "@/assets/images";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";

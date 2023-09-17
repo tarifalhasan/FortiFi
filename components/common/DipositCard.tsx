@@ -1,5 +1,6 @@
 "use client";
 import { DispositCardType } from "@/interfaces";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -153,4 +154,4 @@ const DipositCard: React.FC<Props> = ({ data }) => {
   );
 };
 
-export default DipositCard;
+export default dynamic(() => Promise.resolve(DipositCard), { ssr: false });
