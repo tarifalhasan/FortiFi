@@ -29,7 +29,7 @@ const DipositCard: React.FC<Props> = ({ data }) => {
     <div className="  overflow-hidden !rounded-[15px]">
       {/* top card */}
       <div className="card px-4 lg:px-8 rounded-b-none !rounded-[15px]">
-        <div className=" flex items-center justify-between  gap-4 px-5">
+        <div className=" flex items-center  gap-7 px-5">
           <Image src={data.icon} alt="bitcoin" />
           <div className=" space-y-1">
             <Link href={data.slug} className=" text-t-22 font-extrabold">
