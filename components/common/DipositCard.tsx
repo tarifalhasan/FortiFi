@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import { Button } from "../ui/button";
 import { Slider } from "../ui/slider";
 
@@ -73,6 +74,20 @@ const DipositCard: React.FC<Props> = ({ data }) => {
             </h3>
           </div>
         </div>
+        {openCard && (
+          <div className=" flex justify-center pt-7 pb-0">
+            <Button
+              onClick={() => setOpenCard(false)}
+              className="w-[180px] rounded-full h-[50px] bg-secondary !text-darken"
+            >
+              <span className=" !text-darken">Collapse</span>
+              <MdKeyboardArrowDown
+                className={`${openCard ? " rotate-180" : ""}`}
+                size={25}
+              />
+            </Button>
+          </div>
+        )}
 
         <div className=" relative z-10 px-5 pt-9 grid grid-cols-2 gap-2">
           <Button
@@ -93,7 +108,7 @@ const DipositCard: React.FC<Props> = ({ data }) => {
       {/* bottom card */}
       {openCard && (
         <div
-          className={`  relative z-40 overflow-hidden -mt-[20px]  bg-[#E0DCB3] border border-db  rounded-[15px] card space-y-5`}
+          className={`  relative z-40 overflow-hidden -mt-[20px]  card   rounded-[15px] card space-y-5`}
         >
           <p className="text-t-18 font-semibold">Amount</p>
           <div
