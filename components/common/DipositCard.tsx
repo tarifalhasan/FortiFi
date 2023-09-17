@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import { MdKeyboardArrowDown } from "react-icons/md";
 import { Button } from "../ui/button";
 import { Slider } from "../ui/slider";
 
@@ -15,8 +14,14 @@ interface Props {
 const DipositCard: React.FC<Props> = ({ data }) => {
   const [sliderValue, setSliderValue] = useState<number>(6.09);
   const [openCard, setOpenCard] = useState(false);
+  const [clickedButton, setClickedButton] = useState("");
   const handleSliderChange = (value: number) => {
     setSliderValue(value); // Update the state with the new slider value
+  };
+
+  const handleCardOpen = (clicked: string) => {
+    setClickedButton(clicked);
+    setOpenCard((prev) => !prev);
   };
 
   return (
@@ -33,7 +38,7 @@ const DipositCard: React.FC<Props> = ({ data }) => {
           </div>
         </div>
         <div className=" pt-8 grid grid-cols-2 gap-5">
-          <div className="rounded-md space-y-2 p-4 bg-primary grid place-items-center">
+          <div className="rounded-[15px] space-y-2 p-4 bg-primary grid place-items-center">
             <h4 className=" text-t-16 text-secondary font-bold text-center  ">
               Vault TVL
             </h4>
@@ -42,14 +47,14 @@ const DipositCard: React.FC<Props> = ({ data }) => {
               {data.vaultTvl}
             </h3>
           </div>
-          <div className="rounded-md space-y-2 p-4 bg-primary grid place-items-center">
+          <div className="rounded-[15px] space-y-2 p-4 bg-primary grid place-items-center">
             <h4 className=" text-t-16 text-secondary font-bold text-center ">
               APY
             </h4>
             <div className=" w-6 h-[2px] bg-white" />
             <h3 className=" text-t-18 font-extrabold text-white">{data.apy}</h3>
           </div>
-          <div className="rounded-md space-y-2 p-4 bg-primary grid place-items-center">
+          <div className="rounded-[15px] space-y-2 p-4 bg-primary grid place-items-center">
             <h4 className=" text-t-16 text-secondary font-bold text-center ">
               My TVL
             </h4>
@@ -58,7 +63,7 @@ const DipositCard: React.FC<Props> = ({ data }) => {
               {data.myTvl}
             </h3>
           </div>
-          <div className="rounded-md space-y-2 p-4 bg-primary grid place-items-center">
+          <div className="rounded-[15px] space-y-2 p-4 bg-primary grid place-items-center">
             <h4 className=" text-t-16 text-secondary font-bold text-center ">
               Asset Price
             </h4>
@@ -68,22 +73,19 @@ const DipositCard: React.FC<Props> = ({ data }) => {
             </h3>
           </div>
         </div>
-        <div className=" flex justify-center pt-7 pb-0">
-          <Button
-            onClick={() => setOpenCard((prev) => !prev)}
-            className="w-[180px] rounded-full h-[50px] bg-secondary !text-darken"
-          >
-            <span className=" !text-darken">Collapse</span>
-            <MdKeyboardArrowDown
-              className={`${openCard ? " rotate-180" : ""}`}
-              size={25}
-            />
-          </Button>
-        </div>
 
         <div className=" relative z-10 px-5 pt-9 grid grid-cols-2 gap-2">
-          <Button className="h-[55px] rounded-[15px]">Deposit</Button>
-          <Button className="h-[55px] rounded-[15px]" variant={"secondary"}>
+          <Button
+            onClick={() => handleCardOpen("deposit")}
+            className="h-[55px] rounded-[15px]"
+          >
+            Deposit
+          </Button>
+          <Button
+            onClick={() => handleCardOpen("withdraw")}
+            className="h-[55px] rounded-[15px]"
+            variant={"secondary"}
+          >
             Withdraw
           </Button>
         </div>
@@ -142,12 +144,22 @@ const DipositCard: React.FC<Props> = ({ data }) => {
               <span className=" block">0%</span>
             </li>
           </ul>
-          <button
-            style={{ padding: "15px 24px" }}
-            className="border-2 border-secondary rounded-lg text-t-18 font-bold text-white  w-full inline-flex  items-center justify-center  bg-primary"
-          >
-            Deposit
-          </button>
+
+          {clickedButton === "deposit" ? (
+            <button
+              style={{ padding: "15px 24px" }}
+              className="border-2 border-secondary rounded-lg text-t-18 font-bold text-white  w-full inline-flex  items-center justify-center  bg-primary"
+            >
+              Deposit
+            </button>
+          ) : (
+            <button
+              style={{ padding: "15px 24px" }}
+              className="border-2 bg-secondary border-darken rounded-lg text-t-18 font-bold text-darken  w-full inline-flex  items-center justify-center  "
+            >
+              Withdrew
+            </button>
+          )}
         </div>
       )}
     </div>

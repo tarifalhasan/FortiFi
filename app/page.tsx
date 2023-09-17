@@ -21,7 +21,9 @@ export default function Home() {
           onClick={() => router.push("/")}
           variant={"secondary"}
           className=" rounded-full px-9"
-        ></Button>
+        >
+          Enter
+        </Button>
       </div>
     </section>
   );
