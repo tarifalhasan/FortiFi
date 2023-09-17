@@ -132,16 +132,28 @@ const DipositCard: React.FC<Props> = ({ data }) => {
             onValueChange={(i: any) => handleSliderChange(i)}
           />
           <div className=" grid grid-cols-4 gap-1">
-            <button className=" h-[46px] text-t-16  text-white sm:text-t-18 font-extrabold bg-[#101E33] border-2 border-secondary rounded-[5px] inline-flex items-center justify-center">
+            <button
+              onClick={() => handleSliderChange(25)}
+              className=" h-[46px] text-t-16  text-white sm:text-t-18 font-extrabold bg-[#101E33] border-2 border-secondary rounded-[5px] inline-flex items-center justify-center"
+            >
               25%
             </button>
-            <button className="h-[46px] text-t-16  text-white  sm:text-t-18 font-extrabold bg-[#101E33] border-2 border-secondary rounded-[5px] inline-flex items-center justify-center">
+            <button
+              onClick={() => handleSliderChange(50)}
+              className="h-[46px] text-t-16  text-white  sm:text-t-18 font-extrabold bg-[#101E33] border-2 border-secondary rounded-[5px] inline-flex items-center justify-center"
+            >
               50%
             </button>
-            <button className=" h-[46px] text-t-16 text-white   sm:text-t-18 font-extrabold bg-[#101E33] border-2 border-secondary rounded-[5px] inline-flex items-center justify-center">
+            <button
+              onClick={() => handleSliderChange(75)}
+              className=" h-[46px] text-t-16 text-white   sm:text-t-18 font-extrabold bg-[#101E33] border-2 border-secondary rounded-[5px] inline-flex items-center justify-center"
+            >
               75%
             </button>
-            <button className=" h-[46px] text-t-16 text-white  sm:text-t-18 font-extrabold bg-[#101E33] border-2 border-secondary rounded-[5px] inline-flex items-center justify-center">
+            <button
+              onClick={() => handleSliderChange(100)}
+              className=" h-[46px] text-t-16 text-white  sm:text-t-18 font-extrabold bg-[#101E33] border-2 border-secondary rounded-[5px] inline-flex items-center justify-center"
+            >
               100%
             </button>
           </div>

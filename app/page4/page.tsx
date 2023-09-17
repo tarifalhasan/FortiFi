@@ -1,3 +1,4 @@
+"use client";
 import { bitcoin } from "@/assets/icons";
 import { chart } from "@/assets/images";
 import Image from "next/image";

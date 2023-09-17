@@ -1,3 +1,5 @@
+"use client";
+
 import { chart, savax } from "@/assets/images";
 import Image from "next/image";
 import DepositCard from "./DepositCard";
