@@ -12,7 +12,7 @@ export default function Page5() {
           <Image src={savax} alt="bitcoin" />
           <div>
             <h4 className=" text-darken text-t-22 font-extrabold">
-              FortiFi sAVAX Vault
+              sAVAX Vault
             </h4>
             <p className=" text-darken font-medium">Vault ID #3456</p>
           </div>

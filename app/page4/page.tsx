@@ -13,7 +13,7 @@ export default function Page4() {
           <Image src={bitcoin} alt="bitcoin" />
           <div>
             <h4 className=" text-darken text-t-22 font-extrabold">
-              FortiFi BTC.b Vault
+              BTC.b Vault
             </h4>
             <p className=" text-darken font-medium">Vault ID #3456</p>
           </div>

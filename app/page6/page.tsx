@@ -12,7 +12,7 @@ export default function Page6() {
           <Image src={usdc} alt="bitcoin" />
           <div>
             <h4 className=" text-darken text-t-22 font-extrabold">
-              FortiFi USDC Vault
+              USDC Vault
             </h4>
             <p className=" text-darken font-medium">Vault ID #3456</p>
           </div>

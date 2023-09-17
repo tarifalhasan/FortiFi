@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const DepositCard = () => {
   return (
-    <div>
+    <div className="  space-y-5">
       <div>
         <div className="flex justify-center">
           <div className=" relative z-10 px-5 pt-9 grid grid-cols-2 gap-2">
