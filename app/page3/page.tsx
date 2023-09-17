@@ -37,7 +37,7 @@ const Page2 = () => {
     },
   ];
   return (
-    <div className=" h-full space-y-7 pt-5">
+    <div className=" min-h-[80vh] h-full space-y-7 pt-5">
       <div className="flex w-full justify-end">
         <div className=" px-4 w-full max-w-xl flex items-center justify-center   search rounded-full  h-[50px]">
           <input
